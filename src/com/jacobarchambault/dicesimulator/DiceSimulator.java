@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
-public class PropertyTaxCalculator extends JFrame {
+public class DiceSimulator extends JFrame {
 	/**
 	 * CalcButtonListener is an action listener class for the calcButton component.
 	 */
@@ -38,7 +38,7 @@ public class PropertyTaxCalculator extends JFrame {
 	/**
 	 * Constructor
 	 */
-	public PropertyTaxCalculator(String title) {
+	public DiceSimulator(String title) {
 		super(title);
 		// Specify what happens when the close button is clicked.
 		setDefaultCloseOperation(
