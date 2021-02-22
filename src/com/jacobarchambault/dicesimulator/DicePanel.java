@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class PropertyTaxPanel extends JPanel {
+public class DicePanel extends JPanel {
 	/**
 	 * 
 	 */
@@ -17,7 +17,7 @@ public class PropertyTaxPanel extends JPanel {
 	/**
 	 * Constructor
 	 */
-	public PropertyTaxPanel() {
+	public DicePanel() {
 		// Create a text field.
 		propertyValue = new JTextField(
 				10);
