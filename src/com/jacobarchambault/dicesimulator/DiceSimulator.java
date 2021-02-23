@@ -92,6 +92,8 @@ public class DiceSimulator extends JFrame {
 		diceRoller.addActionListener(new CalcButtonListener());
 		menu.add(
 				diceRoller);
+		  JMenuItem exit = new JMenuItem("Exit");
+		  menu.add(exit);
 		menubar.add(
 				menu);
 		setJMenuBar(
