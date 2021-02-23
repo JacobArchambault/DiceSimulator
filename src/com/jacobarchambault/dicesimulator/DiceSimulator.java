@@ -22,7 +22,7 @@ public class DiceSimulator extends JFrame {
 		@Override
 		public void actionPerformed(
 				ActionEvent e) {
-			dicePanel.showPropertyTax();
+			dicePanel.rollDice();
 			pack();
 		}
 	} // End of inner class

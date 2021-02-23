@@ -37,7 +37,7 @@ public class DicePanel extends JPanel {
 		add(picLabel2);
 	}
 
-	public void showPropertyTax() {
+	public void rollDice() {
 		int randomNum = ThreadLocalRandom.current().nextInt(1, 7);
 		int randomNum2 = ThreadLocalRandom.current().nextInt(1, 7);
 		picLabel.setIcon(new ImageIcon("Dice/Die" + randomNum + ".png"));
