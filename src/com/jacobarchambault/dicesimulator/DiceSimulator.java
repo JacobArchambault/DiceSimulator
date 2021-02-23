@@ -59,10 +59,10 @@ public class DiceSimulator extends JFrame {
 	}
 
 	/**
-	 * The buildButtonPanel method creates a panel containing the calc property tax button.
+	 * The buildButtonPanel method creates a panel containing the Roll the dice button.
 	 */
 	private void buildButtonPanel() {
-		// Create a button to calculate the property tax.
+		// Create a button to roll dice.
 		JButton calcButton = new JButton(
 				"Roll the dice");
 		// Add an action listener to the button.
