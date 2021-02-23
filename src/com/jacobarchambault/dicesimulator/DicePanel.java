@@ -47,6 +47,6 @@ public class DicePanel extends JPanel {
 	}
 
 	public void showPropertyTax() {
-		addPicture(image2, "Dice/Die3.png");
+		picLabel.setIcon(new ImageIcon("Dice/Die3.png"));
 	}
 }
