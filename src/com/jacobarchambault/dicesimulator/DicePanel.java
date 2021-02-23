@@ -22,6 +22,7 @@ public class DicePanel extends JPanel {
 	private ImageIcon image1;
 	private ImageIcon image2;
 	private JLabel picLabel;
+	private JLabel picLabel2;
 
 	/**
 	 * Constructor
@@ -35,18 +36,23 @@ public class DicePanel extends JPanel {
 				new GridLayout(
 						1,
 						3));
-
-		addPicture(image1, "Dice/Die2.png");
-		addPicture(image2, "Dice/Die2.png");
+		image1 = new ImageIcon("Dice/Die1.png");
+		picLabel = new JLabel(image1);
+		add(picLabel);
+		image2 = new ImageIcon("Dice/Die2.png");
+		picLabel2 = new JLabel(image2);
+		add(picLabel2);
 	}
 
 	private void addPicture(ImageIcon image, String path) {
 		image = new ImageIcon(path);
 		picLabel = new JLabel(image);
-		add(picLabel);		// Add the labels and text fields to this panel.
+		add(picLabel);
 	}
 
 	public void showPropertyTax() {
 		picLabel.setIcon(new ImageIcon("Dice/Die3.png"));
+		picLabel2.setIcon(new ImageIcon("Dice/Die4.png"));
+		
 	}
 }
