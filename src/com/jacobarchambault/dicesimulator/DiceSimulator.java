@@ -22,7 +22,7 @@ public class DiceSimulator extends JFrame {
 		@Override
 		public void actionPerformed(
 				ActionEvent e) {
-			propertyTaxPanel.showPropertyTax();
+			dicePanel.showPropertyTax();
 		}
 	} // End of inner class
 
@@ -33,7 +33,7 @@ public class DiceSimulator extends JFrame {
 
 
 
-	private DicePanel propertyTaxPanel; // A panel for displaying assessmentValue and tax
+	private DicePanel dicePanel; // A panel for displaying dice images.
 
 	/**
 	 * Constructor
@@ -43,13 +43,13 @@ public class DiceSimulator extends JFrame {
 		// Specify what happens when the close button is clicked.
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
-		// Create a PropertyTaxPanel object.
-		propertyTaxPanel = new DicePanel();
+		// Create a DicePanel object.
+		dicePanel = new DicePanel();
 		// Build the panel that contains the button.
 		buildButtonPanel();
 		// Add the panels to the content pane.
 		add(
-				propertyTaxPanel,
+				dicePanel,
 				BorderLayout.CENTER);
 		// Pack and display the window.
 		pack();
