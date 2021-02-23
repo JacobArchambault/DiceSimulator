@@ -93,11 +93,20 @@ public class DiceSimulator extends JFrame {
 		menu.add(
 				diceRoller);
 		  JMenuItem exit = new JMenuItem("Exit");
+		  exit.addActionListener(new ExitApp());
 		  menu.add(exit);
 		menubar.add(
 				menu);
 		setJMenuBar(
 				menubar);
 	}
+	// Exit app
+    static class ExitApp implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+            System.exit(0);
+        }
+    }
 
 }
