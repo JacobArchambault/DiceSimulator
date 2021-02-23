@@ -34,7 +34,7 @@ public class DicePanel extends JPanel {
 		setLayout(
 				new GridLayout(
 						1,
-						2));
+						3));
 
 		addPicture(image1, "Dice/Die2.png");
 		addPicture(image2, "Dice/Die2.png");
@@ -47,5 +47,6 @@ public class DicePanel extends JPanel {
 	}
 
 	public void showPropertyTax() {
+		addPicture(image2, "Dice/Die3.png");
 	}
 }
