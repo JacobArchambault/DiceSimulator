@@ -6,6 +6,9 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
@@ -32,20 +35,21 @@ public class DiceSimulator extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 
-
-
 	private DicePanel dicePanel; // A panel for displaying dice images.
 
 	/**
 	 * Constructor
 	 */
-	public DiceSimulator(String title) {
-		super(title);
+	public DiceSimulator(
+			String title) {
+		super(
+				title);
 		// Specify what happens when the close button is clicked.
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
 		// Create a DicePanel object.
 		dicePanel = new DicePanel();
+		buildMenuBar();
 		// Build the panel that contains the button.
 		buildButtonPanel();
 		// Add the panels to the content pane.
@@ -59,7 +63,8 @@ public class DiceSimulator extends JFrame {
 	}
 
 	/**
-	 * The buildButtonPanel method creates a panel containing the Roll the dice button.
+	 * The buildButtonPanel method creates a panel containing the Roll the dice
+	 * button.
 	 */
 	private void buildButtonPanel() {
 		// Create a button to roll dice.
@@ -76,6 +81,21 @@ public class DiceSimulator extends JFrame {
 				buttonPanel,
 				BorderLayout.SOUTH);
 
+	}
+
+	private void buildMenuBar() {
+		JMenuBar menubar = new JMenuBar();
+		JMenu menu = new JMenu(
+				"File");
+		JMenuItem diceRoller = new JMenuItem(
+				"Click here to roll the dice");
+		diceRoller.addActionListener(new CalcButtonListener());
+		menu.add(
+				diceRoller);
+		menubar.add(
+				menu);
+		setJMenuBar(
+				menubar);
 	}
 
 }
