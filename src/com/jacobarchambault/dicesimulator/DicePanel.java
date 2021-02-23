@@ -5,6 +5,8 @@ import java.awt.GridLayout;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -51,8 +53,9 @@ public class DicePanel extends JPanel {
 	}
 
 	public void showPropertyTax() {
-		picLabel.setIcon(new ImageIcon("Dice/Die3.png"));
-		picLabel2.setIcon(new ImageIcon("Dice/Die4.png"));
-		
+		int randomNum = ThreadLocalRandom.current().nextInt(1, 7);
+		int randomNum2 = ThreadLocalRandom.current().nextInt(1, 7);
+		picLabel.setIcon(new ImageIcon("Dice/Die" + randomNum + ".png"));
+		picLabel2.setIcon(new ImageIcon("Dice/Die" + randomNum2 + ".png"));
 	}
 }
