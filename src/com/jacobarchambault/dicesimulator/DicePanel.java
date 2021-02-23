@@ -1,17 +1,10 @@
 package com.jacobarchambault.dicesimulator;
 
-import java.awt.Graphics;
 import java.awt.GridLayout;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -20,7 +13,6 @@ public class DicePanel extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JTextField propertyValue; // To get property value
 	private ImageIcon image1;
 	private ImageIcon image2;
 	private JLabel picLabel;
@@ -30,8 +22,7 @@ public class DicePanel extends JPanel {
 	 * Constructor
 	 */
 	public DicePanel() {
-		// Create a text field.
-		propertyValue = new JTextField(
+		new JTextField(
 				10);
 		// Create a GridLayout manager.
 		setLayout(
@@ -44,12 +35,6 @@ public class DicePanel extends JPanel {
 		image2 = new ImageIcon("Dice/Die2.png");
 		picLabel2 = new JLabel(image2);
 		add(picLabel2);
-	}
-
-	private void addPicture(ImageIcon image, String path) {
-		image = new ImageIcon(path);
-		picLabel = new JLabel(image);
-		add(picLabel);
 	}
 
 	public void showPropertyTax() {
