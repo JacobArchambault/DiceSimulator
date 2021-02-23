@@ -63,7 +63,7 @@ public class DiceSimulator extends JFrame {
 	private void buildButtonPanel() {
 		// Create a button to calculate the property tax.
 		JButton calcButton = new JButton(
-				"Calculate Property tax");
+				"Roll the dice");
 		// Add an action listener to the button.
 		calcButton.addActionListener(
 				new CalcButtonListener());

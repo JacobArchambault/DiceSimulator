@@ -21,6 +21,7 @@ public class DicePanel extends JPanel {
 	private JTextField propertyValue; // To get property value
 	private ImageIcon image1;
 	private ImageIcon image2;
+	private JLabel picLabel;
 
 	/**
 	 * Constructor
@@ -35,28 +36,16 @@ public class DicePanel extends JPanel {
 						1,
 						2));
 
-		addPicture(image1, "Dice/Die1.png");
+		addPicture(image1, "Dice/Die2.png");
 		addPicture(image2, "Dice/Die2.png");
 	}
 
 	private void addPicture(ImageIcon image, String path) {
 		image = new ImageIcon(path);
-		JLabel picLabel = new JLabel(image);
+		picLabel = new JLabel(image);
 		add(picLabel);		// Add the labels and text fields to this panel.
 	}
 
 	public void showPropertyTax() {
-		// Get the assessmentValue.
-		double assessmentValue = Double.parseDouble(
-				propertyValue.getText()) * .6;
-		// Get the property tax.
-		double propertyTax = assessmentValue * .0064;
-		// Display them.
-		JOptionPane.showMessageDialog(
-				null,
-				String.format(
-						"Assessment Value: $%,.2f\nProperty tax: $%,.2f",
-						assessmentValue,
-						propertyTax));
 	}
 }
