@@ -19,8 +19,8 @@ public class DicePanel extends JPanel {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JTextField propertyValue; // To get property value
-	private BufferedImage image1;
-	private BufferedImage image2;
+	private ImageIcon image1;
+	private ImageIcon image2;
 
 	/**
 	 * Constructor
@@ -39,15 +39,10 @@ public class DicePanel extends JPanel {
 		addPicture(image2, "Dice/Die2.png");
 	}
 
-	private void addPicture(BufferedImage image, String path) {
-		try {
-			image = ImageIO.read(new File(path));
-			JLabel picLabel = new JLabel(new ImageIcon(image));
-			add(picLabel);		// Add the labels and text fields to this panel.
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	private void addPicture(ImageIcon image, String path) {
+		image = new ImageIcon(path);
+		JLabel picLabel = new JLabel(image);
+		add(picLabel);		// Add the labels and text fields to this panel.
 	}
 
 	public void showPropertyTax() {
