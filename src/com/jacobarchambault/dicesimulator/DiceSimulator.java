@@ -30,6 +30,16 @@ public class DiceSimulator extends JFrame {
 		}
 	} // End of inner class
 
+	// Exit app
+	static class ExitApp implements ActionListener {
+		@Override
+		public void actionPerformed(
+				ActionEvent e) {
+			System.exit(
+					0);
+		}
+	}
+
 	/**
 	 * 
 	 */
@@ -89,24 +99,20 @@ public class DiceSimulator extends JFrame {
 				"File");
 		JMenuItem diceRoller = new JMenuItem(
 				"Click here to roll the dice");
-		diceRoller.addActionListener(new CalcButtonListener());
+		diceRoller.addActionListener(
+				new CalcButtonListener());
 		menu.add(
 				diceRoller);
-		  JMenuItem exit = new JMenuItem("Exit");
-		  exit.addActionListener(new ExitApp());
-		  menu.add(exit);
+		JMenuItem exit = new JMenuItem(
+				"Exit");
+		exit.addActionListener(
+				new ExitApp());
+		menu.add(
+				exit);
 		menubar.add(
 				menu);
 		setJMenuBar(
 				menubar);
 	}
-	// Exit app
-    static class ExitApp implements ActionListener
-    {
-        public void actionPerformed(ActionEvent e)
-        {
-            System.exit(0);
-        }
-    }
 
 }
